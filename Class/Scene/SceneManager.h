@@ -4,13 +4,12 @@
 
 class SceneManager {
 public:
-
-
-
     // 初期化、更新、描画
     void Init();
     void Update();
     void Draw();
+
+
 
 private:
     int gameStage;

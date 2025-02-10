@@ -14,9 +14,11 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
     char keys[256] = { 0 };
     char preKeys[256] = { 0 };
 
+    // シーン管理クラスのインスタンスを生成
     SceneManager* scene = new SceneManager();
     scene->Init();
 
+    // キー入力受付クラス
     InputManager* input = InputManager::GetInstance();
 
     // ウィンドウの×ボタンが押されるまでループ
@@ -50,6 +52,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
         scene->Draw();
 
         Novice::ScreenPrintf(16, 16, "Press Transition Key : T");
+        Novice::ScreenPrintf(16, 32, "Press Reset Key : R");
 
         ///
         /// ↑描画処理ここまで
